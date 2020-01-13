@@ -71,6 +71,8 @@ public class SearchAndFilterTest extends BasicFunctions {
 	}
 
 	public void searchBarTask345() {
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("headerSearch")));
+		wait.until(ExpectedConditions.elementToBeClickable(spo.searchBar()));
 		ClickOnElement(spo.searchBar(), driver);
 		wait.until(ExpectedConditions.elementToBeClickable(spo.searchBarInputField()));
 		EnterTextInElement(spo.searchBarInputField(), "gucci bag");
